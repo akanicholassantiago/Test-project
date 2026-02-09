@@ -48,10 +48,28 @@ a {
 }
 
 .logo {
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.04em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+}
+
+.logo-main {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(31, 30, 28, 0.5);
+}
+
+.logo-script {
+  font-family: "Allura", cursive;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-top: -6px;
+  margin-left: 36px;
 }
 
 .nav-links {
