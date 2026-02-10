@@ -690,7 +690,6 @@ main {
   border-radius: var(--radius);
   padding: 48px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 32px;
   align-items: center;
 }
@@ -698,6 +697,7 @@ main {
 .cta-form {
   display: grid;
   gap: 14px;
+  margin-top: 16px;
 }
 
 .cta-form input {
