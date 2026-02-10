@@ -575,7 +575,7 @@ main {
   gap: 32px;
   align-items: center;
 }
-
+}
 .about-card ul {
   list-style: none;
   padding: 0;
@@ -650,11 +650,17 @@ main {
 }
 
 .bio-photo {
-  width: 110px;
-  height: 110px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow);
+}
+
+.bio-name {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  margin: 0;
 }
 
 .bio-text .role {
@@ -690,6 +696,7 @@ main {
   border-radius: var(--radius);
   padding: 48px;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 32px;
   align-items: center;
 }
@@ -697,7 +704,6 @@ main {
 .cta-form {
   display: grid;
   gap: 14px;
-  margin-top: 16px;
 }
 
 .cta-form input {
@@ -707,6 +713,35 @@ main {
   font-size: 0.95rem;
 }
 
+ .contact-map {
+    width: 100%;
+    max-width: 1200px;  /* prevents it from stretching too wide */
+    margin: 0 auto;     /* centers the map */
+    padding: 0 16px;    /* mobile side padding */
+  }
+
+  /* Map iframe styling */
+  .contact-map iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Subtle hover effect */
+  .contact-map iframe:hover {
+    transform: scale(1.01);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.16);
+  }
+
+  /* Responsive adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .contact-map iframe {
+      height: 280px;
+    }
+  }
 .site-footer {
   max-width: 1200px;
   margin: 0 auto 40px;
@@ -863,4 +898,3 @@ main {
     gap: 20px;
   }
 }
-  }
