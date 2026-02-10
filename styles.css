@@ -66,10 +66,10 @@ a {
 
 .logo-script {
   font-family: "Allura", cursive;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   font-weight: 400;
   margin-top: -6px;
-  margin-left: 36px;
+  margin-left: 65px;
 }
 
 .nav-links {
@@ -147,6 +147,23 @@ main {
   font-size: 1.1rem;
   color: var(--muted);
 }
+.lead2 {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.lead3 {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.lead4 {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.lead5 {
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
 
 .hero-actions {
   margin-top: 28px;
@@ -287,18 +304,272 @@ main {
   font-weight: 600;
 }
 
-.process-steps {
-  margin-top: 32px;
+.gallery {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery .section-heading {
+  margin-bottom: 40px;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 5000px;
+  margin: 0 auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  width: 1200px;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 16px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.slide.fade {
+  animation: fade 0.8s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s ease;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.next {
+  right: 0;
+}
+
+.prev {
+  left: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+  text-align: center;
+  padding: 20px;
+  background: transparent;
+  
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: var(--border);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: var(--accent);
+}
+
+.dot:hover {
+  background-color: var(--accent-dark);
+}
+
+/* Listings search form */
+.listings {
+  padding: 60px 40px;
+  background: transparent;
+}
+
+.listings .section-heading {
+  margin-bottom: 8px;
+}
+
+.listings .lead {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.listings-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  align-items: end;
+  max-width: 1200px;
+  margin-top: 12px;
 }
 
-.process-steps h3 {
-  margin-bottom: 12px;
+.listings-form .field {
+  display: flex;
+  flex-direction: column;
 }
 
-.about {
+.listings-form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.listings-form input,
+.listings-form select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+
+.listings-form .actions {
+  grid-column: span 1;
+}
+
+.listings-form .actions .button {
+  width: 100%;
+  padding: 12px 16px;
+}
+
+  /* Listings Results */
+  .listings-results {
+    margin-top: 32px;
+  }
+
+  .results-title {
+    font-family: "Playfair Display", serif;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .listings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .listing-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 40px 80px rgba(31, 30, 28, 0.16);
+  }
+
+  .listing-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .listing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .listing-price {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--accent);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .listing-details {
+    padding: 18px;
+  }
+
+  .listing-details h4 {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+  }
+
+  .address {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0 0 12px;
+  }
+
+  .listing-specs {
+    display: flex;
+    gap: 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+
+  .listing-desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+
+  @media (max-width: 768px) {
+    .listings {
+      padding: 40px 20px;
+    }
+
+    .listings-form {
+      grid-template-columns: 1fr;
+    }
+
+    .listings-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
@@ -314,6 +585,97 @@ main {
 .about-card li {
   padding: 8px 0;
   border-bottom: 1px solid rgba(31, 30, 28, 0.08);
+}
+
+/* Our Services + Bio styles */
+.about-services {
+  margin-top: 36px;
+}
+
+.services-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.service-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.service-card h4 {
+  margin: 8px 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.service-card p {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.team-bio {
+  margin-top: 36px;
+  text-align: center;
+}
+
+.bio-inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.bio-photo {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.bio-text .role {
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+.bio-text .phone {
+  color: var(--muted);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .bio-inner {
+    flex-direction: column;
+  }
+
+  .bio-photo {
+    width: 96px;
+    height: 96px;
+  }
 }
 
 .insight-grid {
@@ -386,4 +748,119 @@ main {
   .cta {
     padding: 32px 20px;
   }
+
+  .insights-sold h2 {
+    font-size: 1.8rem;
+  }
+
+  .insight-item {
+    gap: 16px;
+  }
+
+  .insight-item img {
+    max-width: 100%;
+  }
+
+  .insight-content {
+    padding: 16px;
+  }
 }
+
+.insights-sold {
+  padding: 80px 40px;
+}
+
+.insights-sold h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 3vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.insights-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.insight-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.insight-item:nth-child(2) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.insight-item:nth-child(2) .insight-content {
+  order: -1;
+}
+
+.insight-item img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.insight-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin: 0 0 16px;
+}
+
+.insight-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 12px 0;
+}
+
+.insight-content p strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .insight-item {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-item:nth-child(2) .insight-content {
+    order: 0;
+  }
+
+  .gallery {
+    padding: 48px 20px;
+  }
+
+  .slide img {
+    height: 300px;
+  }
+
+  .prev,
+  .next {
+    padding: 12px 16px;
+    font-size: 16px;
+  }
+
+  .insights-sold {
+    padding: 48px 20px;
+  }
+
+  .insights-sold h2 {
+    margin-bottom: 40px;
+  }
+
+  .insights-grid {
+    gap: 40px;
+  }
+
+  .insight-item {
+    gap: 20px;
+  }
+}
+  }
